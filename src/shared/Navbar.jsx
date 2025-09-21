@@ -23,14 +23,14 @@ const Navbar = () => {
                             <input className='outline-none' type="text" name="" id="" placeholder='Search' />
                             <CiSearch className='text-xl' />
                         </div>
-                        <MdOutlineShoppingCart className='tex-3xl text-gray-600 mx-7' />
-                        <div className='text-gray-600 border-l border-gray-700 pl-10'>
+                        <MdOutlineShoppingCart className='tex-4xl text-gray-600 mx-7' />
+                        <div className='hidden lg:block text-gray-600 border-l border-gray-700 pl-10'>
                             <Link to={"/signin"}>Login</Link>/
                             <Link to={"/signup"}>Signup</Link>
                         </div>
                         {/* mobile device */}
                         <div className='md:hidden'>
-                            <RxHamburgerMenu className='text-2xl text-gray-600' />
+                            <RxHamburgerMenu className='text-xl text-gray-600' />
 
                         </div>
                     </div>
