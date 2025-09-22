@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { CiSearch } from 'react-icons/ci';
+import { IoMdClose } from 'react-icons/io';
 import { MdOutlineShoppingCart } from 'react-icons/md';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { Link } from 'react-router-dom';
@@ -34,7 +35,14 @@ const Navbar = () => {
                             <RxHamburgerMenu onClick={() => setOpen(!open)}
                                 className='text-xl text-gray-600' />
                         </div>
-                        <div className='absolute md:hidden top-12 right-0 py-2 px-10 bg-white shadow-md rounded-2xl transform transition duration-1000'>
+                        <div className={`fixed md:hidden top-0 right-0 p-3 w-36 bg-white shadow-md rounded-2xl transform transition duration-300
+                            ${open ? ' translate-x-0' : 'translate-x-full'}
+                            `} >
+                            <div className='flex justify-between items-center w-full border-b border-gray-300 pb-2 mb-5'>
+                                <h1 className='text-xl text-gray-600 font-medium'>Menu</h1>
+                                <IoMdClose onClick={()=>setOpen(!open)} className='text-2xl text-black' />
+
+                            </div>
                             {open && (
                                 <div className='flex flex-col gap-5 text-gray-700 '>
                                     <Link to={"/"}>Home</Link>
