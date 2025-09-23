@@ -8,13 +8,13 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     const [open, setOpen] = useState(false);
     return (
-        <div className='bg-blue-200'>
+        <div className=''>
             <div className='flex justify-between items-center py-2 lg:py-3  max-w-11/12 mx-auto'>
-                <img className='w-32 lg:w-36' src="https://thepixelcurve.com/wp/lmsmart/lp/wp-content/uploads/sites/2/2021/12/2x_logo.png" alt="" />
+                <img className='w-32 lg:w-40' src="https://thepixelcurve.com/wp/lmsmart/lp/wp-content/uploads/sites/2/2021/12/2x_logo.png" alt="" />
 
                 <div>
                     <div className='flex items-center'>
-                        <div className='hidden lg:inline-flex gap-7 text-gray-700 '>
+                        <div className='hidden lg:inline-flex gap-7 poppins font-semibold text-gray-700 '>
                             <Link to={"/"}>Home</Link>
                             <Link to={"/course"}>Course</Link>
                             <Link to={"/blog"}>Blog</Link>
@@ -26,7 +26,7 @@ const Navbar = () => {
                             <CiSearch className='text-xl' />
                         </div>
                         <MdOutlineShoppingCart className='text-2xl text-gray-600 mx-7' />
-                        <div className='hidden lg:block text-gray-600 border-l border-gray-700 pl-10'>
+                        <div className='hidden lg:block text-gray-600 poppins font-semibold border-l border-gray-700 pl-10'>
                             <Link to={"/signin"}>Login</Link>/
                             <Link to={"/signup"}>Signup</Link>
                         </div>
