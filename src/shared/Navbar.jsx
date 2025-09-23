@@ -55,7 +55,7 @@ const Navbar = () => {
                             }
                         </div>
                         {/* backdrop */}
-                        ${open && (
+                        {open && (
                             <div className='fixed inset-0 bg-black opacity-40 z-40'
                                 onClick={() => setOpen(!open)}
                             >
