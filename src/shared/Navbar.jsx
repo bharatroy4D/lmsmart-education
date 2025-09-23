@@ -35,7 +35,7 @@ const Navbar = () => {
                             <RxHamburgerMenu onClick={() => setOpen(!open)}
                                 className='text-2xl text-gray-600' />
                         </div>
-                        <div className={`fixed md:hidden top-0 right-0 p-3 w-36 bg-white shadow-md rounded-2xl transform transition duration-300
+                        <div className={`fixed md:hidden top-0 right-0 p-3 w-36 z-60 bg-white shadow-md rounded-2xl transform transition duration-300
                             ${open ? ' translate-x-0' : 'translate-x-full'}
                             `} >
                             <div className='flex justify-between items-center w-full border-b border-gray-300 pb-2 mb-5'>
@@ -59,7 +59,6 @@ const Navbar = () => {
                             <div className='fixed inset-0 bg-black opacity-20 z-40'
                                 onClick={() => setOpen(!open)}
                             >
-
                             </div>
                         )}
                     </div>
