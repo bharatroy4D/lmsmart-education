@@ -40,7 +40,7 @@ const Navbar = () => {
                             `} >
                             <div className='flex justify-between items-center w-full border-b border-gray-300 pb-2 mb-5'>
                                 <h1 className='text-lg text-gray-600 font-medium'>Menu</h1>
-                                <IoMdClose onClick={()=>setOpen(!open)} className='text-xl text-black' />
+                                <IoMdClose onClick={() => setOpen(!open)} className='text-xl text-black' />
 
                             </div>
                             {open && (
@@ -54,6 +54,14 @@ const Navbar = () => {
 
                             }
                         </div>
+                        {/* backdrop */}
+                        ${open && (
+                            <div className='fixed inset-0 bg-black opacity-40 z-40'
+                                onClick={() => setOpen(!open)}
+                            >
+
+                            </div>
+                        )}
                     </div>
 
                 </div>
