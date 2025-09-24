@@ -32,7 +32,6 @@ const Home = () => {
                     <div className='flex flex-col gap-3  lg:hidden container '>
                         <img className='lg:h-72   lg:pb-10' src="https://thepixelcurve.com/wp/lmsmart/lp/wp-content/uploads/sites/2/2022/02/HR0835.jpg" alt="" />
 
-                        <img className='' src="https://thepixelcurve.com/wp/lmsmart/lp/wp-content/uploads/sites/2/2022/02/HTR084.jpg" alt="" />
                     </div>
             </div>
 
