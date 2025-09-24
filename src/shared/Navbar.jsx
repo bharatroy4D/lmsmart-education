@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CiSearch } from 'react-icons/ci';
+import { CiSearch, CiUser } from 'react-icons/ci';
 import { IoMdClose } from 'react-icons/io';
 import { MdOutlineShoppingCart } from 'react-icons/md';
 import { RxHamburgerMenu } from 'react-icons/rx';
@@ -26,7 +26,8 @@ const Navbar = () => {
                             <CiSearch className='text-xl' />
                         </div>
                         <MdOutlineShoppingCart className='text-2xl text-gray-600 mx-7' />
-                        <div className='hidden lg:block text-gray-600 poppins font-semibold border-l border-gray-700 pl-10'>
+                        <div className='hidden lg:inline-flex items-center text-gray-600 poppins font-semibold border-l border-gray-700 pl-10'>
+                            <CiUser className='mr-2'/>
                             <Link to={"/signin"}>Login</Link>/
                             <Link to={"/signup"}>Signup</Link>
                         </div>
