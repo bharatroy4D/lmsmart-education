@@ -9,7 +9,7 @@ const Banner = () => {
                     <h3 className='text-base text-gray-400 font-medium uppercase'>Developed By To Teachers</h3>
                     <h1 className='text-3xl lg:text-5xl text-gray-700 font-bold'>Experience a learning platform that take you next level</h1>
                     <h2 className='text-base text-gray-400  lg:w-96'>World-class training and development programs developed by top teachers</h2>
-                    <button className='btn btn-secondary w-fit'>Explore All Course</button>
+                    <button className='btn btn-secondary mb-5 lg:mb-0  w-fit'>Explore All Course</button>
                 </div >
                 {/* banner content image */}
                 <div className='container hidden lg:flex flex-col relative items-end w-full lg:w-[50%] '>
