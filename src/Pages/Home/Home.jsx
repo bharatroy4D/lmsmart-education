@@ -12,21 +12,23 @@ const Home = () => {
                     <button className='btn btn-secondary w-fit'>Explore All Course</button>
                 </div >
                 {/* banner content image */}
-                <div className='flex relative gap-1 items-end w-[50%] '>
-                    <img className='lg:h-72 pb-10' src="https://thepixelcurve.com/wp/lmsmart/lp/wp-content/uploads/sites/2/2022/02/HR0835.jpg" alt="" />
-                    
-                    <img className='lg:w-64' src="https://thepixelcurve.com/wp/lmsmart/lp/wp-content/uploads/sites/2/2022/02/HTR084.jpg" alt="" />
+                <div className='flex flex-col relative gap-1 items-end w-[50%] '>
+                    <div className='flex items-end z-40'>
+                        <img className='lg:h-72 pb-10' src="https://thepixelcurve.com/wp/lmsmart/lp/wp-content/uploads/sites/2/2022/02/HR0835.jpg" alt="" />
 
-                    <img className='absolute top-12 -left-15 z-10' src="https://thepixelcurve.com/wp/lmsmart/lp/wp-content/uploads/sites/2/2021/11/SHA43.png" alt="" />
+                        <img className='lg:w-64' src="https://thepixelcurve.com/wp/lmsmart/lp/wp-content/uploads/sites/2/2022/02/HTR084.jpg" alt="" />
+                    </div>
 
-                    <img className='absolute top-1/6 right-1/4 z-20' src="https://thepixelcurve.com/wp/lmsmart/lp/wp-content/uploads/sites/2/2021/11/MS425.png" alt="" />
+                    {/* background animation */}
+                    <div className='flex absolute top-8 -left-8 z-30 '>
+                        <img className='' src="https://thepixelcurve.com/wp/lmsmart/lp/wp-content/uploads/sites/2/2021/11/SHA43.png" alt="" />
+
+                        <img className='absolute z-40 -right-20 -top-4' src="https://thepixelcurve.com/wp/lmsmart/lp/wp-content/uploads/sites/2/2021/11/MS425.png" alt="" />
+                    </div>
 
                 </div>
             </div>
-            {/* background animation */}
-            <div className='relative '>
 
-            </div>
 
         </div>
     );
