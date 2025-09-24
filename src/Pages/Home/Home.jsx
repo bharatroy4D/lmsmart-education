@@ -3,7 +3,7 @@ import React from 'react';
 const Home = () => {
     return (
         <div className='bg-base-200 roboto lg:py-24'>
-            <div className='flex justify-between items-center gap-10 w-11/12 mx-auto'>
+            <div className='flex justify-between items-center gap-10 container px-10 mx-auto'>
                 {/* banner context text */}
                 <div className='flex flex-col gap-5 w-[50%]'>
                     <h3 className='text-base text-gray-400 font-medium uppercase'>Developed By To Teachers</h3>
@@ -12,7 +12,7 @@ const Home = () => {
                     <button className='btn btn-secondary w-fit'>Explore All Course</button>
                 </div >
                 {/* banner content image */}
-                <div className='flex flex-col relative  items-end w-[50%] '>
+                <div className='container flex flex-col relative  items-end w-[50%] '>
                     <div className='flex items-end gap-4 z-40'>
                         <img className='lg:h-72 pb-10' src="https://thepixelcurve.com/wp/lmsmart/lp/wp-content/uploads/sites/2/2022/02/HR0835.jpg" alt="" />
 
