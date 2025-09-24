@@ -12,8 +12,8 @@ const Home = () => {
                     <button className='btn btn-secondary w-fit'>Explore All Course</button>
                 </div >
                 {/* banner content image */}
-                <div className='flex flex-col relative gap-1 items-end w-[50%] '>
-                    <div className='flex items-end z-40'>
+                <div className='flex flex-col relative  items-end w-[50%] '>
+                    <div className='flex items-end gap-4 z-40'>
                         <img className='lg:h-72 pb-10' src="https://thepixelcurve.com/wp/lmsmart/lp/wp-content/uploads/sites/2/2022/02/HR0835.jpg" alt="" />
 
                         <img className='lg:w-64' src="https://thepixelcurve.com/wp/lmsmart/lp/wp-content/uploads/sites/2/2022/02/HTR084.jpg" alt="" />
@@ -24,6 +24,7 @@ const Home = () => {
                         <img className='' src="https://thepixelcurve.com/wp/lmsmart/lp/wp-content/uploads/sites/2/2021/11/SHA43.png" alt="" />
 
                         <img className='absolute z-40 -right-20 -top-4' src="https://thepixelcurve.com/wp/lmsmart/lp/wp-content/uploads/sites/2/2021/11/MS425.png" alt="" />
+                        <img className='absolute z-40 -bottom-64 -right-60' src="https://thepixelcurve.com/wp/lmsmart/lp/wp-content/uploads/sites/2/2021/11/SHA021.png" alt="" />
                     </div>
 
                 </div>
