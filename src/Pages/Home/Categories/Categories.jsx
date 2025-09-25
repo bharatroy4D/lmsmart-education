@@ -5,9 +5,9 @@ const Categories = () => {
     return (
         <div className='container px-4 lg:px-10 mx-auto'>
             <div className='py-20'>
-                <div className='flex justify-between items-center '>
-                    <SectionTitle title={'Featured topics by category'} />
-                    <button className='btn btn-outline font-bold '>Explore More</button>
+                <div className='flex  justify-between items-center '>
+                    <SectionTitle title={'Featured topics by category'} textSize={"text-3xl"} />
+                    <button className='btn btn-outline font-bold hidden md:block'>Explore More</button>
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 py-12 lg:grid-cols-4 gap-4'>
                     {/* card 1 */}
