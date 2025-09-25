@@ -6,11 +6,11 @@ import { MdOutlineFacebook } from 'react-icons/md';
 const Footer = () => {
     return (
         <div className='bg-blue-950'>
-            <div className='container px-4 py-7 lg:py-20 lg:px-10 mx-auto '>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 items-center'>
+            <div className='container px-4 pt-7 lg:pt-20 lg:px-10 mx-auto '>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 pb-6 lg:pb-10 border-b border-base-100/30 gap-10 items-center'>
                     {/* card 1 */}
-                    <div className='space-y-3 text-white'>
-                        <img className='w-50 ' src="https://thepixelcurve.com/wp/lmsmart/lp/wp-content/uploads/sites/2/2021/12/2x_logo-white.png" alt="" />
+                    <div className='space-y-3 text-white '>
+                        <img className='w-44 ' src="https://thepixelcurve.com/wp/lmsmart/lp/wp-content/uploads/sites/2/2021/12/2x_logo-white.png" alt="" />
                         <p className='text-xl '>We support programs that create advancement for people</p>
                         {/* Social icon */}
                         <div className='flex items-center gap-5'>
@@ -57,6 +57,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
+                <p className='font-semibold text-white py-8 text-center'>© Copyright 2023 Pixelcurve All rights reserved.</p>
             </div>
         </div>
     );
