@@ -10,13 +10,13 @@ const Tutorial = () => {
     }, [])
     return (
         <div className='container px-4 lg:px-10 pb-8 lg:pb-16 mx-auto '>
-            <h1 className='text-center'><SectionTitle title={'Top Rated Learning Tutorials'} /></h1>
+            <h1 className='lg:text-center'><SectionTitle title={'Top Rated Learning Tutorials'} textSize={'text-3xl'} /></h1>
             <div>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-8 lg:py-15'>
                     {
                         course.map(card => (
                             <div key={card.id} className='rounded shadow-lg' >
-                                <img className='rounded h-40 w-72 ' src={card.image} alt="" />
+                                <img className='rounded h-40 w-full lg:w-72 ' src={card.image} alt="" />
                                 <div className='space-y-5 p-5'>
                                     <div className='flex items-center justify-between mt-4'>
                                         <h1 className='bg-gray-100 py-0.5 px-2 rounded text-gray-500 font-medium'>{card.category}</h1>
