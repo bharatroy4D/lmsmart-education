@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Absolute Beginners Cooking Course",
+    "image": "https://i.ibb.co.com/pjYrJCKY/download-7.jpg",
+    "author": "A001",
+    "author_name": "John Doe",
+    "category": "Cooking",
+    "price": 19.99
+  },
+  {
+    "id": 2,
+    "title": "Web Design Training with Elementor",
+    "image": "https://i.ibb.co.com/NnjfJBLf/download.jpg",
+    "author": "A002",
+    "author_name": "Sarah Lee",
+    "category": "Web Development",
+    "price": 24.50
+  },
+  {
+    "id": 3,
+    "title": "Basic Level Youth Health and Cooking",
+    "image": "https://i.ibb.co.com/gM7nb5V5/download-1.jpg",
+    "author": "A003",
+    "author_name": "Michael Smith",
+    "category": "Health & Cooking",
+    "price": 17.00
+  },
+  {
+    "id": 4,
+    "title": "Drawing and Painting Course for Children",
+    "image": "https://i.ibb.co.com/HfVqQ597/download-2.jpg",
+    "author": "A004",
+    "author_name": "Emily Johnson",
+    "category": "Art",
+    "price": 15.75
+  },
+  {
+    "id": 5,
+    "title": "Drawing and Painting Course for Children",
+    "image": "https://i.ibb.co.com/sdR31kgB/download-3.jpg",
+    "author": "A005",
+    "author_name": "David Brown",
+    "category": "Art",
+    "price": 16.50
+  },
+  {
+    "id": 6,
+    "title": "Complete Digital Marketing Course",
+    "image": "https://i.ibb.co.com/Sw1q4LFS/download-4.jpg",
+    "author": "A006",
+    "author_name": "Sophia Miller",
+    "category": "Marketing",
+    "price": 29.99
+  },
+  {
+    "id": 7,
+    "title": "Online Healthy Cooking Course",
+    "image": "https://i.ibb.co.com/CKTQSG3S/download-5.jpg",
+    "author": "A007",
+    "author_name": "James Wilson",
+    "category": "Cooking",
+    "price": 18.60
+  },
+  {
+    "id": 8,
+    "title": "The Ultimate App Making Course",
+    "image": "https://i.ibb.co.com/pvHKxCtt/download-6.jpg",
+    "author": "A008",
+    "author_name": "Olivia Martinez",
+    "category": "Programming",
+    "price": 23.40
+  }
+]
