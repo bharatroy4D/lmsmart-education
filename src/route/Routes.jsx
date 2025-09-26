@@ -7,6 +7,10 @@ import Pages from "../Pages/Pages/Pages";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import DashboardLayout from "../layout/DashboardLayout/DashboardLayout";
+import OverView from "../Pages/Dashboard/OverView/OverView";
+import User from "../Pages/Dashboard/User/User";
+import Profile from "../Pages/Dashboard/Profile/Profile";
+import Setting from "../Pages/Dashboard/Setting/Setting";
 
 export const router = createBrowserRouter([
     {
@@ -41,6 +45,24 @@ export const router = createBrowserRouter([
     },
     {
         path: '/dashboardLayout',
-        element: <DashboardLayout />
+        element: <DashboardLayout />,
+        children: [
+            {
+                path:'overview',
+                element: <OverView/>
+            },
+            {
+                path:'user',
+                element:<User/>
+            },
+            {
+                path:'profile',
+                element:<Profile/>
+            },
+            {
+                path:'setting',
+                element:<Setting/>
+            },
+        ]
     }
 ])
