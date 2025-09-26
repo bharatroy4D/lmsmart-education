@@ -28,8 +28,8 @@ const Navbar = () => {
                         <MdOutlineShoppingCart className='text-2xl text-gray-600 mx-7' />
                         <div className='hidden lg:inline-flex items-center text-gray-600 poppins font-semibold border-l border-gray-700 pl-10'>
                             <CiUser className='mr-2'/>
-                            <Link to={"/signin"}>Login</Link>/
-                            <Link to={"/signup"}>Signup</Link>
+                            <Link to={"/login"}>Login</Link>/
+                            <Link to={"/register"}>Register</Link>
                         </div>
                         {/* mobile device */}
                         <div className='md:hidden'>
