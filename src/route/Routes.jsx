@@ -11,6 +11,7 @@ import OverView from "../Pages/Dashboard/OverView/OverView";
 import User from "../Pages/Dashboard/User/User";
 import Profile from "../Pages/Dashboard/Profile/Profile";
 import Setting from "../Pages/Dashboard/Setting/Setting";
+import PrivateRoute from "../Components/privateRoute";
 
 export const router = createBrowserRouter([
     {
@@ -45,23 +46,23 @@ export const router = createBrowserRouter([
     },
     {
         path: '/dashboardLayout',
-        element: <DashboardLayout />,
+        element: <PrivateRoute><DashboardLayout /></PrivateRoute>,
         children: [
             {
-                path:'overview',
-                element: <OverView/>
+                path: 'overview',
+                element: <OverView />
             },
             {
-                path:'user',
-                element:<User/>
+                path: 'user',
+                element: <User />
             },
             {
-                path:'profile',
-                element:<Profile/>
+                path: 'profile',
+                element: <Profile />
             },
             {
-                path:'setting',
-                element:<Setting/>
+                path: 'setting',
+                element: <Setting />
             },
         ]
     }
