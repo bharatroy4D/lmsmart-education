@@ -1,20 +1,27 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 
 const Login = () => {
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
-
+  const [form, setForm] = useState({ email: "", password: "" })
+  const [error, setError] = useState("")
+  const [loading, setLoading] = useState(true)
+  const navigate = useNavigate();
+  const { Login } = useAuth();
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Login Data:", formData);
-    // You can integrate API here
-  };
+    setForm({ ...form, [e.target.name]: e.target.value })
+  }
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setError(true)
+    setLoading(false)
+    try {
+      await Login(form)
+      navigate("/dashboardLayout")
+    } catch (err) {
+      setError(err.message || "Login is failed")
+    }
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -34,9 +41,9 @@ const Login = () => {
             <input
               type="email"
               name="email"
-              placeholder="Enter your email"
-              value={formData.email}
+              value={form.email}
               onChange={handleChange}
+              placeholder="Enter your email"
               required
               className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
             />
@@ -50,9 +57,9 @@ const Login = () => {
             <input
               type="password"
               name="password"
-              placeholder="Enter your password"
-              value={formData.password}
+              value={form.password}
               onChange={handleChange}
+              placeholder="Enter your password"
               required
               className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
             />

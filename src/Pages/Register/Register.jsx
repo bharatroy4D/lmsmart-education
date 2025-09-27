@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 const Register = () => {
   const [form, setForm] = useState({ email: "", password: "" });
   const [error, setError] = useState("")
+  const [loading, setLoading] = useState(false)
   const navigate = useNavigate();
   const { Register } = useAuth();
   const handleChange = (e) => {
@@ -12,11 +13,15 @@ const Register = () => {
   }
   const handleSubmit = async (e) => {
     e.preventDefault()
+    setError("")
+    setLoading(true)
     try {
       await Register(form)
       navigate("/")
     } catch (err) {
-      setError(err.massage || "signup is failed")
+      setError(err.message || "signup is failed")
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -27,6 +32,10 @@ const Register = () => {
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
           Create an Account
         </h2>
+        {/* Error message */}
+        {error && (
+          <p className="text-red-500 text-center mb-4 font-medium">{error}</p>
+        )}
 
         {/* Register Form */}
         <form onSubmit={handleSubmit} className="space-y-5">
@@ -81,6 +90,7 @@ const Register = () => {
           >
             Register
           </button>
+          {!loading && "Signup....."}
         </form>
 
         {/* Extra Links */}
