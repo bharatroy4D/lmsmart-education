@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import { useAuth } from "../../context/AuthContext";
 
 const Register = () => {
+  const [form, setForm] = useState({ email: "", password: "" });
+  const { Register } = useAuth();
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value })
+  }
+  const handleSubmit = async (e) => {
+    e.preventDefault
+  }
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="w-full max-w-md bg-white shadow-lg rounded-2xl p-8">
@@ -10,7 +20,7 @@ const Register = () => {
         </h2>
 
         {/* Register Form */}
-        <form className="space-y-5">
+        <form onSubmit={handleSubmit} className="space-y-5">
           {/* Name */}
           <div>
             <label className="block text-gray-700 text-sm font-medium mb-2">
@@ -33,6 +43,8 @@ const Register = () => {
               type="email"
               name="email"
               placeholder="Enter your email"
+              value={form.email}
+              onChange={handleChange}
               className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
             />
           </div>
@@ -45,6 +57,8 @@ const Register = () => {
             <input
               type="password"
               name="password"
+              value={form.password}
+              onChange={handleChange}
               placeholder="Enter your password"
               className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
             />

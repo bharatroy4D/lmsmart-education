@@ -1,4 +1,4 @@
-import { Children, createContext, useState } from "react"
+import { Children, createContext, useContext, useState } from "react"
 import { login, register } from "../api/authApi"
 
 const AuthContext = createContext()
@@ -23,7 +23,7 @@ export const AuthProvider = ({ children }) => {
     const Register = async (data) => {
         try {
             const res = await register(data)
-            setUser(res?.data || null)
+            setUser(res?.user || null)
             return res;
         } catch (err) {
             console.error("register is failed", err)
@@ -31,8 +31,9 @@ export const AuthProvider = ({ children }) => {
         }
     }
     return (
-        <AuthContext.Provider value={{ Login, user }}>
+        <AuthContext.Provider value={{ Login, Register, user }}>
             {children}
         </AuthContext.Provider>
     )
 }
+export const useAuth = () => useContext(AuthContext)
