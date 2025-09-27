@@ -5,7 +5,7 @@ import { useAuth } from "../../context/AuthContext";
 const Login = () => {
   const [form, setForm] = useState({ email: "", password: "" })
   const [error, setError] = useState("")
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
   const navigate = useNavigate();
   const { Login } = useAuth();
   const handleChange = (e) => {
@@ -14,12 +14,14 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setError(true)
-    setLoading(false)
+    setLoading(true)
     try {
       await Login(form)
       navigate("/dashboardLayout")
     } catch (err) {
       setError(err.message || "Login is failed")
+    } finally {
+      loading(false)
     }
   }
 
@@ -30,6 +32,9 @@ const Login = () => {
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
           Login to Your Account
         </h2>
+        {error && (
+          <p className="text-red-500 text-center mb-4 font-medium">{error}</p>
+        )}
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-5">
@@ -71,6 +76,7 @@ const Login = () => {
             className="w-full bg-blue-500 text-white py-2 rounded-lg font-semibold hover:bg-blue-600 transition"
           >
             Login
+            {loading ? "Logging in..." : "Login"}
           </button>
         </form>
 
