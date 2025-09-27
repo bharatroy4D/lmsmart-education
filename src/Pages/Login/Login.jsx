@@ -21,7 +21,7 @@ const Login = () => {
     } catch (err) {
       setError(err.message || "Login is failed")
     } finally {
-      loading(false)
+      setLoading(false)
     }
   }
 
