@@ -1,4 +1,4 @@
-import { Children, createContext, useContext, useState } from "react"
+import { createContext, useContext, useState } from "react"
 import { login, register } from "../api/authApi"
 
 const AuthContext = createContext()
@@ -30,8 +30,14 @@ export const AuthProvider = ({ children }) => {
             throw err
         }
     }
+
+    // logout
+    const Logout = () => {
+        localStorage.removeItem("token")
+        setUser(null)
+    }
     return (
-        <AuthContext.Provider value={{ Login, Register, user }}>
+        <AuthContext.Provider value={{ Login, Register, user, Logout }}>
             {children}
         </AuthContext.Provider>
     )

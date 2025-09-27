@@ -1,7 +1,8 @@
 import React from "react";
 import { CiGrid41 } from "react-icons/ci";
 import { FaUsers, FaUserCircle, FaCog } from "react-icons/fa";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useAuth } from "../../../context/AuthContext";
 
 const menuItems = [
   { name: "Overview", path: "overview", icon: <CiGrid41 size={22} /> },
@@ -12,6 +13,12 @@ const menuItems = [
 
 const SideBar = () => {
   const location = useLocation();
+  const { Logout } = useAuth();
+  const navigate = useNavigate()
+  const handleLogout = async () => {
+    await Logout()
+    navigate("/")
+  }
 
   return (
     <div className="bg-gradient-to-b from-blue-900 to-blue-950 h-screen w-60 flex flex-col shadow-xl">
@@ -29,10 +36,9 @@ const SideBar = () => {
               key={item.name}
               to={item.path}
               className={`flex items-center gap-3 px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 
-                ${
-                  isActive
-                    ? "bg-blue-700 text-white shadow-lg"
-                    : "text-gray-300 hover:bg-blue-800 hover:text-white"
+                ${isActive
+                  ? "bg-blue-700 text-white shadow-lg"
+                  : "text-gray-300 hover:bg-blue-800 hover:text-white"
                 }`}
             >
               {item.icon}
@@ -40,6 +46,7 @@ const SideBar = () => {
             </Link>
           );
         })}
+        <button onClick={handleLogout} className="btn btn-primary">Logout</button>
       </div>
     </div>
   );
