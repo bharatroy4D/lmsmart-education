@@ -90,7 +90,6 @@ const Register = () => {
           >
             Register
           </button>
-          {!loading && "Signup....."}
         </form>
 
         {/* Extra Links */}
