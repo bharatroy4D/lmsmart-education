@@ -39,19 +39,7 @@ const Register = () => {
 
         {/* Register Form */}
         <form onSubmit={handleSubmit} className="space-y-5">
-          {/* Name */}
-          <div>
-            <label className="block text-gray-700 text-sm font-medium mb-2">
-              Full Name
-            </label>
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter your full name"
-              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
-            />
-          </div>
-
+      
           {/* Email */}
           <div>
             <label className="block text-gray-700 text-sm font-medium mb-2">
