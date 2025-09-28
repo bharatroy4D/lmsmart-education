@@ -46,7 +46,12 @@ const SideBar = () => {
             </Link>
           );
         })}
-        <button onClick={handleLogout} className="btn btn-primary">Logout</button>
+        <button
+          onClick={handleLogout}
+          className="flex items-center gap-3 px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 text-gray-300 hover:bg-red-600 hover:text-white mt-4"
+        >
+          <FaUserCircle size={22} /> Logout
+        </button>
       </div>
     </div>
   );
