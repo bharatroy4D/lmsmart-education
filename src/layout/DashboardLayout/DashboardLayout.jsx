@@ -13,7 +13,7 @@ const DashboardLayout = () => {
             <p className="text-lg font-medium">Hello User</p>
             <img
               className="w-12 h-12 rounded-full border-2 border-white object-cover"
-              src="https://i.ibb.co/W4hHDFfw/rounded-profile-image.png"
+              src=""
               alt="User"
             />
           </div>
