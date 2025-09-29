@@ -21,3 +21,22 @@ export const register = async (data) => {
         throw err.response?.data || {message:"register is failed"}
     }
 }
+// send otp
+export const sendOtp = async (data) => {
+    try {
+        const res = await API.post("/authentication_app/send-otp", data);
+        return res.data;
+    } catch (err) {
+        throw err.response?.data || { message: "OTP send failed" };
+    }
+};
+
+// verify otp
+export const verifyOtp = async (data) => {
+    try {
+        const res = await API.post("/authentication_app/verify-otp", data);
+        return res.data;
+    } catch (err) {
+        throw err.response?.data || { message: "OTP verify failed" };
+    }
+};
