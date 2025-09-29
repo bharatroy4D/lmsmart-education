@@ -17,7 +17,7 @@ const Login = () => {
     setLoading(true)
     try {
       await Login(form)
-      navigate("/dashboardLayout")
+      navigate("/otp")
     } catch (err) {
       setError(err.message || "Login is failed")
     } finally {

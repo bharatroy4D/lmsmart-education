@@ -72,7 +72,7 @@ export const router = createBrowserRouter([
         ]
     },
     {
-        path: "otp",
+        path: "/otp",
         element: <Otp />
     }
 ])
