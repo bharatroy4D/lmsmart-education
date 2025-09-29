@@ -41,15 +41,12 @@ export const AuthProvider = ({ children }) => {
             throw err
         }
     }
+    
 
     // 🔹 verify otp
     const VerifyOtp = async (data) => {
         try {
-            const res = await verifyOtp(data)
-            if (res?.token) {
-                localStorage.setItem("token", res.token)
-                setUser(res?.user || null)
-            }
+            const res = await verifyOtp(data)         
             return res;
         } catch (err) {
             console.error("otp verify failed", err)
