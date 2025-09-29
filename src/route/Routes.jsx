@@ -12,6 +12,7 @@ import User from "../Pages/Dashboard/User/User";
 import Profile from "../Pages/Dashboard/Profile/Profile";
 import Setting from "../Pages/Dashboard/Setting/Setting";
 import PrivateRoute from "../Components/privateRoute";
+import Otp from "../Components/Otp";
 
 export const router = createBrowserRouter([
     {
@@ -69,5 +70,9 @@ export const router = createBrowserRouter([
                 element: <Setting />
             },
         ]
+    },
+    {
+        path: "otp",
+        element: <Otp />
     }
 ])
