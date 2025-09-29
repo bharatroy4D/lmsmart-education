@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react"
-import { login, register } from "../api/authApi"
+import { login, register, sendOtp, verifyOtp } from "../api/authApi"
 
 const AuthContext = createContext()
 export const AuthProvider = ({ children }) => {
@@ -27,6 +27,32 @@ export const AuthProvider = ({ children }) => {
             return res;
         } catch (err) {
             console.error("register is failed", err)
+            throw err
+        }
+    }
+
+    // 🔹 send otp
+    const OtpSend = async (data) => {
+        try {
+            const res = await sendOtp(data)
+            return res;
+        } catch (err) {
+            console.error("otp send failed", err)
+            throw err
+        }
+    }
+
+    // 🔹 verify otp
+    const VerifyOtp = async (data) => {
+        try {
+            const res = await verifyOtp(data)
+            if (res?.token) {
+                localStorage.setItem("token", res.token)
+                setUser(res?.user || null)
+            }
+            return res;
+        } catch (err) {
+            console.error("otp verify failed", err)
             throw err
         }
     }
