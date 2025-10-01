@@ -24,7 +24,7 @@ const SideBar = () => {
     <div className="bg-gradient-to-b from-blue-900 to-blue-950 h-screen w-60 flex flex-col shadow-xl">
       {/* Logo / Title */}
       <div className="text-center py-6 border-b border-blue-800">
-        <h1 className="text-white text-2xl font-bold tracking-wider">Dashboard</h1>
+        <h1 className="text-white text-2xl font-bold tracking-wider">My Dashboard</h1>
       </div>
 
       {/* Menu Items */}
