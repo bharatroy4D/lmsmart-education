@@ -1,7 +1,12 @@
 import React, { useState } from "react";
+import { useAuth } from "../context/AuthContext"; // ✅ AuthContext ইম্পোর্ট করো
 
 const Otp = () => {
     const [otp, setOtp] = useState(new Array(6).fill(""));
+    const { VerifyOtp, OtpSend } = useAuth(); // ✅ AuthContext থেকে ফাংশন নিই
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState("");
+    const [success, setSuccess] = useState("");
 
     // OTP value handle
     const handleChange = (element, index) => {
@@ -17,9 +22,38 @@ const Otp = () => {
         }
     };
 
-    const handleSubmit = (e) => {
+    // ✅ OTP Verify
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        alert(`Entered OTP is: ${otp.join("")}`);
+        setLoading(true);
+        setError("");
+        setSuccess("");
+        try {
+            const code = otp.join("");
+            const res = await VerifyOtp({ otp: code }); // API call
+            setSuccess("OTP Verified Successfully!");
+            console.log("Verify Response:", res);
+        } catch (err) {
+            setError(err?.message || "OTP verification failed");
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    // ✅ Resend OTP
+    const handleResend = async () => {
+        setLoading(true);
+        setError("");
+        setSuccess("");
+        try {
+            const res = await OtpSend({ email: "user@email.com" }); // এখানে ইউজারের ইমেইল/ফোন পাঠাতে হবে
+            setSuccess("OTP Resent Successfully!");
+            console.log("Resend Response:", res);
+        } catch (err) {
+            setError(err?.message || "Failed to resend OTP");
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -30,6 +64,10 @@ const Otp = () => {
                 <p className="text-gray-600 mt-2">
                     Enter the 6-digit OTP sent to your email/phone
                 </p>
+
+                {/* Error & Success Message */}
+                {error && <p className="text-red-600 mt-2">{error}</p>}
+                {success && <p className="text-green-600 mt-2">{success}</p>}
 
                 {/* OTP inputs */}
                 <form onSubmit={handleSubmit} className="mt-6">
@@ -49,17 +87,23 @@ const Otp = () => {
                     {/* Submit button */}
                     <button
                         type="submit"
-                        className="w-full mt-6 bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
+                        disabled={loading}
+                        className="w-full mt-6 bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition disabled:opacity-50"
                     >
-                        Verify OTP
+                        {loading ? "Verifying..." : "Verify OTP"}
                     </button>
                 </form>
 
                 {/* Resend link */}
                 <p className="mt-4 text-sm text-gray-600">
                     Didn’t receive code?{" "}
-                    <button className="text-blue-600 hover:underline">
-                        Resend OTP
+                    <button
+                        type="button"
+                        onClick={handleResend}
+                        className="text-blue-600 hover:underline"
+                        disabled={loading}
+                    >
+                        {loading ? "Resending..." : "Resend OTP"}
                     </button>
                 </p>
             </div>
