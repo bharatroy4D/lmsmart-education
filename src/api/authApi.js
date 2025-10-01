@@ -35,7 +35,7 @@ export const sendOtp = async (data) => {
 // verify otp
 export const verifyOtp = async (data) => {
     try {
-        const res = await API.post("/authentication_app/verify-otp/", data);
+        const res = await API.post("/authentication_app/verify_otp/", data);
         return res;
     } catch (err) {
         throw err.response?.data || { message: "OTP verify failed" };

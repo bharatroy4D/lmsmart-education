@@ -40,8 +40,7 @@ export const AuthProvider = ({ children }) => {
             console.error("otp send failed", err)
             throw err
         }
-    }
-    
+    }   
 
     // 🔹 verify otp
     const VerifyOtp = async (data) => {
@@ -49,7 +48,7 @@ export const AuthProvider = ({ children }) => {
             const res = await verifyOtp(data)         
             return res;
         } catch (err) {
-            console.error("otp verify failed", err)
+            console.log("otp verify failed", err)
             throw err
         }
     }
