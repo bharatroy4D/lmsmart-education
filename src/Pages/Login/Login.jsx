@@ -7,7 +7,7 @@ const Login = () => {
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate();
-  const { Login } = useAuth();
+  const { Login, OtpSend } = useAuth();
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
@@ -17,6 +17,8 @@ const Login = () => {
     setLoading(true)
     try {
       await Login(form)
+      OtpSend({ email: form.email })
+
       navigate("/otp")
     } catch (err) {
       setError(err.message || "Login is failed")
@@ -75,7 +77,7 @@ const Login = () => {
             type="submit"
             className="w-full bg-blue-500 text-white py-2 rounded-lg font-semibold hover:bg-blue-600 transition"
           >
-            {loading? "Login..." : "Login"}
+            {loading ? "Login..." : "Login"}
           </button>
         </form>
 
