@@ -31,7 +31,6 @@ export const sendOtp = async (data) => {
     }
 };
 
-
 // verify otp
 export const verifyOtp = async (data) => {
     try {
@@ -41,4 +40,6 @@ export const verifyOtp = async (data) => {
         throw err.response?.data || { message: "OTP verify failed" };
     }
 };
+
+
 

@@ -37,7 +37,7 @@ export const AuthProvider = ({ children }) => {
             const res = await sendOtp(data)
             return res;
         } catch (err) {
-            console.error("otp send failed", err)
+            console.log("otp send failed", err)
             throw err
         }
     }   
