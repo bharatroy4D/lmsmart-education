@@ -42,21 +42,32 @@ export default function OTPPage() {
   };
 
   // Verify button click
-  const handleVerify = async () => {
-    try {
-      const data = {
-        email: user?.email, // user থেকে email
-        otp: otp.join(""), // OTP join করে পাঠাচ্ছি
-      };
-      const res = await VerifyOtp(data);
-      console.log("Verify Response:", res);
-      if (res.status === 200) {
-        navigate("/dashboardLayout");
-      }
-    } catch (err) {
-      console.log("OTP Verify Failed:", err);
+// Verify button click
+const handleVerify = async () => {
+  try {
+    const data = {
+      email: user?.email,
+      otp: otp.join(""),
+    };
+    const res = await VerifyOtp(data);
+
+    console.log("Verify Response:", res);
+
+    // যদি backend token পাঠায়, তাহলে সেটাকে localStorage এ রাখো
+    if (res?.token) {
+      localStorage.setItem("token", res.token);
+      navigate("/dashboardLayout");
+    } else if (res?.status === 200) {
+      navigate("/dashboardLayout");
+    } else {
+      alert(res?.message || "OTP verification failed!");
     }
-  };
+  } catch (err) {
+    console.log("OTP Verify Failed:", err);
+    alert("Invalid OTP or Verification Failed!");
+  }
+};
+
 
   // Clear button
   const handleClear = () => {
