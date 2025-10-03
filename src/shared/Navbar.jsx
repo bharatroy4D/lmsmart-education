@@ -14,11 +14,12 @@ const Navbar = () => {
 
                 <div>
                     <div className='flex items-center'>
-                        <div className='hidden lg:inline-flex gap-7 poppins font-semibold text-gray-700 '>
+                        <div className='hidden lg:inline-flex gap-7 poppins font-semibold text-gray-800 '>
                             <Link to={"/"}>Home</Link>
                             <Link to={"/course"}>Course</Link>
                             <Link to={"/blog"}>Blog</Link>
                             <Link to={"/pages"}>Pages</Link>
+                            <Link to={"/dashboardLayout"}>Dashboard</Link>
                             <Link to={"/dashboardLayout"}>Dashboard</Link>
                         </div>
                         {/* search bar */}
