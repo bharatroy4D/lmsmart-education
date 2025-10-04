@@ -20,7 +20,6 @@ const Navbar = () => {
                             <Link to={"/blog"}>Blog</Link>
                             <Link to={"/pages"}>Pages</Link>
                             <Link to={"/dashboardLayout"}>Dashboard</Link>
-                            <Link to={"/dashboardLayout"}>Dashboard</Link>
                         </div>
                         {/* search bar */}
                         <div className='hidden lg:inline-flex border border-gray-400 rounded-2xl text-gray-700 py-1 px-3 ml-10 '>
