@@ -2,8 +2,8 @@ import React from 'react';
 
 const Facilities = () => {
     return (
-        <div className='bg-blue-950'>
-            <div className='container lg:flex items-center justify-between gap-8 px-4 lg:px-10 mx-auto'>
+        <div>
+            <div className='container  lg:flex items-center justify-between bg-blue-950 gap-8 px-4 lg:px-10 mx-auto'>
                 {/* card 1 */}
                 <div className='flex items-center gap-6 py-7 text-white'>
                     <img className='w-14' src="https://thepixelcurve.com/wp/lmsmart/lp/wp-content/uploads/sites/2/2022/01/III98456.png" alt="" />
