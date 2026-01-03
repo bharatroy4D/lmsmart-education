@@ -9,7 +9,7 @@ const Navbar = () => {
     const [open, setOpen] = useState(false);
     return (
         <div className=''>
-            <div className='flex justify-between items-center py-2 lg:py-3  container px-4 lg:px-10 mx-auto'>
+            <div className='container flex justify-between items-center py-2 lg:py-3  px-4 lg:px-10 mx-auto'>
                 <img className='w-36 lg:w-44 lg:pr-8 ' src="https://thepixelcurve.com/wp/lmsmart/lp/wp-content/uploads/sites/2/2021/12/2x_logo.png" alt="" />
 
                 <div>
