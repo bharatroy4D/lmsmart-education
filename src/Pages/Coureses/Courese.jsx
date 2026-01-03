@@ -1,10 +1,12 @@
 import React from 'react';
 import CourseItem from './CourseItem/CourseItem';
+import CoursesBanner from './Banner/CourseBanner';
 
 const Courese = () => {
     return (
         <div>
-            <CourseItem/>
+            <CoursesBanner />
+            <CourseItem />
         </div>
     );
 };
