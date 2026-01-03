@@ -30,7 +30,7 @@ const courseData = [
 
 const Course = () => {
   return (
-    <section className="container mx-auto px-4 py-16">
+    <section className="container mx-auto px-4 lg:px-10 py-16">
       
       {/* SECTION TITLE */}
       <div className="text-center mb-12">

@@ -22,7 +22,7 @@ const Tutorial = () => {
                                         <h1 className='bg-gray-100 py-0.5 px-2 rounded text-gray-500 font-medium'>{card.category}</h1>
                                         <h2 className='font-medium'>{card.price}</h2>
                                     </div>
-                                    <h1 className='text-xl font-medium text-gray-800'>{card.title}</h1>
+                                    <h1 className='text-lg font-medium text-gray-800'>{card.title}</h1>
                                     <div className='flex items-center gap-3'>
                                         <img className='w-8 rounded-full' src={card.author} alt="" />
                                         <h1 className='text-gray-400 font-semibold'>{card.author_name}</h1>
