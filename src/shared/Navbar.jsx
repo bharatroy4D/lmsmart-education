@@ -17,7 +17,7 @@ const Navbar = () => {
                         {/* Desktop Links */}
                         <div className='hidden lg:inline-flex gap-7 poppins font-semibold text-gray-800'>
                             <Link to={"/"} className="px-2 py-1 rounded hover:bg-gray-200 transition">Home</Link>
-                            <Link to={"/course"} className="px-2 py-1 rounded hover:bg-gray-200 transition">Course</Link>
+                            <Link to={"/courses"} className="px-2 py-1 rounded hover:bg-gray-200 transition">Course</Link>
                             <Link to={"/blog"} className="px-2 py-1 rounded hover:bg-gray-200 transition">Blog</Link>
                             <Link to={"/pages"} className="px-2 py-1 rounded hover:bg-gray-200 transition">Pages</Link>
                             <Link to={"/dashboardLayout"} className="px-2 py-1 rounded hover:bg-gray-200 transition">Dashboard</Link>
@@ -53,7 +53,7 @@ const Navbar = () => {
                             {open && (
                                 <div className='flex flex-col gap-5 text-gray-700 '>
                                     <Link to={"/"} className="px-2 py-1 rounded hover:bg-gray-200 transition" onClick={() => setOpen(false)}>Home</Link>
-                                    <Link to={"/course"} className="px-2 py-1 rounded hover:bg-gray-200 transition" onClick={() => setOpen(false)}>Course</Link>
+                                    <Link to={"/courses"} className="px-2 py-1 rounded hover:bg-gray-200 transition" onClick={() => setOpen(false)}>Course</Link>
                                     <Link to={"/blog"} className="px-2 py-1 rounded hover:bg-gray-200 transition" onClick={() => setOpen(false)}>Blog</Link>
                                     <Link to={"/pages"} className="px-2 py-1 rounded hover:bg-gray-200 transition" onClick={() => setOpen(false)}>Pages</Link>
                                 </div>

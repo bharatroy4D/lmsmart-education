@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Home from "../Pages/Home/Home";
-import Course from "../Pages/Course/Course";
 import Blog from "../Pages/Blog/Blog";
 import Pages from "../Pages/Pages/Pages";
 import Login from "../Pages/Login/Login";
@@ -13,6 +12,7 @@ import Profile from "../Pages/Dashboard/Profile/Profile";
 import Setting from "../Pages/Dashboard/Setting/Setting";
 import PrivateRoute from "../Components/privateRoute";
 import Otp from "../Components/Otp";
+import Courses from "../Pages/Coureses/Courese";
 
 export const router = createBrowserRouter([
     {
@@ -24,8 +24,8 @@ export const router = createBrowserRouter([
                 element: <Home />
             },
             {
-                path: '/course',
-                element: <Course />
+                path: '/courses',
+                element: <Courses />
             },
             {
                 path: '/blog',
