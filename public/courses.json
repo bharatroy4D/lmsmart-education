@@ -1,0 +1,107 @@
+ [
+    {
+      "id": 1,
+      "category": "Business",
+      "title": "The Business Intelligence Analyst Course",
+      "price": 59.00,
+      "currency": "USD",
+      "image": "/images/course-business-1.jpg",
+      "instructor": "Tim Burton",
+      "rating": 5,
+      "reviews": 10,
+      "students": 12,
+      "badge": "Business"
+    },
+    {
+      "id": 2,
+      "category": "Technology",
+      "title": "Web Design Training with Elementor",
+      "price": 29.00,
+      "currency": "USD",
+      "image": "/images/course-tech-1.jpg",
+      "instructor": "Devon Koen",
+      "rating": 5,
+      "reviews": 12,
+      "students": 12,
+      "badge": "Technology"
+    },
+    {
+      "id": 3,
+      "category": "Lifestyle",
+      "title": "Basic Level Youth Health and Cooking",
+      "price": 39.00,
+      "currency": "USD",
+      "image": "/images/course-cooking-1.jpg",
+      "instructor": "Fred Tylman",
+      "rating": 5,
+      "reviews": 12,
+      "students": 8,
+      "badge": "Cooking"
+    },
+    {
+      "id": 4,
+      "category": "Lifestyle",
+      "title": "Drawing and Painting Course for Children",
+      "price": 0,
+      "currency": "USD",
+      "image": "/images/course-art-1.jpg",
+      "instructor": "Tim Burton",
+      "rating": 5,
+      "reviews": 14,
+      "students": 70,
+      "badge": "Free"
+    },
+    {
+      "id": 5,
+      "category": "Finance",
+      "title": "WordPress Beginner to Advanced Course",
+      "price": 29.00,
+      "currency": "USD",
+      "image": "/images/course-wp-1.jpg",
+      "instructor": "Devon Koen",
+      "rating": 5,
+      "reviews": 13,
+      "students": 51,
+      "badge": "Finance"
+    },
+    {
+      "id": 6,
+      "category": "Business",
+      "title": "Complete Digital Marketing Course",
+      "price": 0,
+      "currency": "USD",
+      "image": "/images/course-marketing-1.jpg",
+      "instructor": "Tim Burton",
+      "rating": 5,
+      "reviews": 11,
+      "students": 116,
+      "badge": "Free"
+    },
+    {
+      "id": 7,
+      "category": "Lifestyle",
+      "title": "Online Healthy Cooking Course",
+      "price": 0,
+      "currency": "USD",
+      "image": "/images/course-cooking-2.jpg",
+      "instructor": "Fred Tylman",
+      "rating": 5,
+      "reviews": 12,
+      "students": 21,
+      "badge": "Free"
+    },
+    {
+      "id": 8,
+      "category": "Marketing",
+      "title": "IELTS Exam Preparation Course",
+      "price": 49.00,
+      "currency": "USD",
+      "image": "/images/course-ielts-1.jpg",
+      "instructor": "Fred Tylman",
+      "rating": 5,
+      "reviews": 12,
+      "students": 86,
+      "badge": "Marketing"
+    }
+  ]
+
