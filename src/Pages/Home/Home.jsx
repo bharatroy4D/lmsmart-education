@@ -6,6 +6,7 @@ import Tutorial from './Tutorial/Tutorial';
 import Author from './Author/Author';
 import Course from './Course/Course';
 import StudentStory from './StudentStory/StudentStory';
+import NewsLatter from './NewsLatter/NewsLatter';
 
 const Home = () => {
     return (
@@ -17,6 +18,7 @@ const Home = () => {
             <Author />
             <Course />
             <StudentStory />
+            <NewsLatter />
         </div>
     );
 };
