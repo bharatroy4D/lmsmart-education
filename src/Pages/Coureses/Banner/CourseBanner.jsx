@@ -2,7 +2,7 @@ import React from "react";
 
 const CoursesBanner = () => {
   return (
-    <section className="relative bg-gradient-to-r  from-green-600 to-emerald-500 py-20">
+    <section className="relative bg-gradient-to-r  from-blue-50 to-green-200 py-20">
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/20"></div>
 

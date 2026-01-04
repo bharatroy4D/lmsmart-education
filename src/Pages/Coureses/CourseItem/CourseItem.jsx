@@ -49,7 +49,7 @@ const CourseItem = () => {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`text-sm font-semibold pb-1 border-b-2 transition
+              className={`cursor-pointer text-sm font-semibold pb-1 border-b-2 transition
                 ${
                   activeCategory === cat
                     ? "border-green-500 text-green-600"
