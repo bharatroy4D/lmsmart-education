@@ -1,8 +1,8 @@
 import React from "react";
 
-const CoursesBanner = () => {
+const BlogBanner = () => {
   return (
-    <section className="relative bg-gradient-to-r h-2/3 from-green-600 to-emerald-500 py-20">
+    <section className="relative bg-gradient-to-r from-indigo-400 to-purple-600 py-20">
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/20"></div>
 
@@ -10,18 +10,18 @@ const CoursesBanner = () => {
         
         {/* Breadcrumb */}
         <p className="text-sm mb-4 opacity-90">
-          Home <span className="mx-2">/</span> Courses
+          Home <span className="mx-2">/</span> Blog
         </p>
 
         {/* Title */}
         <h1 className="text-4xl md:text-5xl font-bold mb-5">
-          Explore Our Popular Courses
+          Our Latest Blogs & Articles
         </h1>
 
         {/* Subtitle */}
         <p className="max-w-2xl mx-auto text-base md:text-lg opacity-95">
-          Learn new skills from industry experts and boost your career with our
-          high-quality online courses.
+          Stay updated with the latest trends, tips, and insights from our
+          experts in web development, design, and technology.
         </p>
 
       </div>
@@ -29,4 +29,4 @@ const CoursesBanner = () => {
   );
 };
 
-export default CoursesBanner;
+export default BlogBanner;
