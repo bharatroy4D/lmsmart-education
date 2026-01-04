@@ -36,7 +36,7 @@ const CourseItem = () => {
 
   return (
     <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="container mx-auto px-4 lg:px-10">
 
         {/* Title */}
         <h2 className="text-3xl font-bold text-center mb-8">
@@ -86,8 +86,8 @@ const CourseItem = () => {
                   {course.title}
                 </h3>
 
-                <p className="text-sm text-gray-500 mb-3">
-                  👤 {course.instructor}
+                <p className="flex gap-2 items-center text-sm text-gray-500 mb-3">
+                 <img src="https://thepixelcurve.com/wp/lmsmart/lp/wp-content/uploads/sites/2/2021/12/RIT43-150x150.jpeg" alt="" className="w-6 h-6 rounded-full" /> {course.instructor}
                 </p>
 
                 {/* Rating */}
