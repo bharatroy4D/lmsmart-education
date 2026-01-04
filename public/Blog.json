@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "category": "Lifestyle",
+    "title": "Thoughts for Educators On School Reopening",
+    "image": "/images/blog/blog-1.jpg",
+    "author": "Fred Tylman",
+    "comments": 2,
+    "date": "2024-05-12",
+    "excerpt": "Insights and perspectives for educators as schools adapt to new learning environments.",
+    "tag": "Lifestyle",
+    "readTime": "5 min read"
+  },
+  {
+    "id": 2,
+    "category": "Lifestyle",
+    "title": "Information About Teacher Certification",
+    "image": "/images/blog/blog-2.jpg",
+    "author": "Fred Tylman",
+    "comments": 2,
+    "date": "2024-05-14",
+    "excerpt": "Everything you need to know about teacher certification programs and requirements.",
+    "tag": "Lifestyle",
+    "readTime": "4 min read"
+  },
+  {
+    "id": 3,
+    "category": "Learning",
+    "title": "We are changing the way the world learns",
+    "image": "/images/blog/blog-3.jpg",
+    "author": "Fred Tylman",
+    "comments": 2,
+    "date": "2024-05-18",
+    "excerpt": "How digital platforms and innovation are transforming education worldwide.",
+    "tag": "Learning",
+    "readTime": "6 min read"
+  },
+  {
+    "id": 4,
+    "category": "Science",
+    "title": "Why do we need to know about data science?",
+    "image": "/images/blog/blog-4.jpg",
+    "author": "Fred Tylman",
+    "comments": 2,
+    "date": "2024-05-20",
+    "excerpt": "Understanding the importance of data science in modern technology and business.",
+    "tag": "Science",
+    "readTime": "5 min read"
+  },
+  {
+    "id": 5,
+    "category": "Health",
+    "title": "Guide to visas and funding to study in the UK",
+    "image": "/images/blog/blog-5.jpg",
+    "author": "Fred Tylman",
+    "comments": 2,
+    "date": "2024-05-22",
+    "excerpt": "A complete guide for international students planning to study in the UK.",
+    "tag": "Health",
+    "readTime": "7 min read"
+  },
+  {
+    "id": 6,
+    "category": "Lifestyle",
+    "title": "Life at university in America or Canada",
+    "image": "/images/blog/blog-6.jpg",
+    "author": "Fred Tylman",
+    "comments": 2,
+    "date": "2024-05-25",
+    "excerpt": "Discover student life experiences and opportunities in North American universities.",
+    "tag": "Lifestyle",
+    "readTime": "5 min read"
+  },
+  {
+    "id": 7,
+    "category": "Learning",
+    "title": "Building a Career in Data Science and Analytics",
+    "image": "/images/blog/blog-7.jpg",
+    "author": "Fred Tylman",
+    "comments": 2,
+    "date": "2024-05-28",
+    "excerpt": "Steps, skills, and tools required to build a successful career in data science.",
+    "tag": "Learning",
+    "readTime": "6 min read"
+  },
+  {
+    "id": 8,
+    "category": "Learning",
+    "title": "Educational technology and mobile learning",
+    "image": "/images/blog/blog-8.jpg",
+    "author": "Fred Tylman",
+    "comments": 2,
+    "date": "2024-05-30",
+    "excerpt": "Exploring how mobile learning and EdTech are shaping modern education.",
+    "tag": "Learning",
+    "readTime": "4 min read"
+  },
+  {
+    "id": 9,
+    "category": "Finance",
+    "title": "Studying in the UK has always been my dream",
+    "image": "/images/blog/blog-9.jpg",
+    "author": "Fred Tylman",
+    "comments": 2,
+    "date": "2024-06-01",
+    "excerpt": "A personal story and guide on pursuing education opportunities in the UK.",
+    "tag": "Finance",
+    "readTime": "5 min read"
+  }
+]
