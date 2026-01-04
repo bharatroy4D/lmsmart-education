@@ -3,43 +3,57 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 
 const Login = () => {
-  const [form, setForm] = useState({ email: "", password: "" })
-  const [error, setError] = useState("")
-  const [loading, setLoading] = useState(false)
+  const [form, setForm] = useState({ email: "", password: "" });
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
   const navigate = useNavigate();
   const { Login, OtpSend } = useAuth();
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value })
-  }
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    setError(true)
-    setLoading(true)
-    try {
-      await Login(form)
-      OtpSend({ email: form.email })
 
-      navigate("/otp")
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+    setLoading(true);
+
+    try {
+      await Login(form);
+      await OtpSend({ email: form.email });
+      navigate("/otp");
     } catch (err) {
-      setError(err.message || "Login is failed")
+      setError(err.message || "Login failed");
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="w-full max-w-md bg-white shadow-lg rounded-2xl p-8">
-        {/* Title */}
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
-          Login to Your Account
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4">
+      
+      {/* Card */}
+      <div className="w-full max-w-md sm:max-w-lg lg:max-w-xl bg-white rounded-2xl shadow-xl p-6 sm:p-8 lg:p-10">
+        
+        {/* Heading */}
+        <h2 className="text-2xl lg:text-3xl font-bold text-center text-gray-800 mb-2">
+          Welcome Back
         </h2>
+        <p className="text-center text-gray-500 mb-6">
+          Login to continue to your account
+        </p>
+
+        {/* Error */}
         {error && (
-          <p className="text-red-500 text-center mb-4 font-medium">{error}</p>
+          <p className="text-red-500 text-center mb-4 font-medium">
+            {error}
+          </p>
         )}
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="space-y-5">
+        <form onSubmit={handleSubmit} className="space-y-6">
+          
           {/* Email */}
           <div>
             <label className="block text-gray-700 text-sm font-medium mb-2">
@@ -50,9 +64,9 @@ const Login = () => {
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="Enter your email"
+              placeholder="you@example.com"
               required
-              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
+              className="w-full px-4 py-3 text-base border rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
           </div>
 
@@ -66,25 +80,29 @@ const Login = () => {
               name="password"
               value={form.password}
               onChange={handleChange}
-              placeholder="Enter your password"
+              placeholder="••••••••"
               required
-              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
+              className="w-full px-4 py-3 text-base border rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
           </div>
 
-          {/* Submit */}
+          {/* Button */}
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-2 rounded-lg font-semibold hover:bg-blue-600 transition"
+            disabled={loading}
+            className="w-full py-3 text-lg font-semibold text-white rounded-xl bg-blue-600 hover:bg-blue-700 transition disabled:opacity-60"
           >
-            {loading ? "Login..." : "Login"}
+            {loading ? "Logging in..." : "Login"}
           </button>
         </form>
 
-        {/* Extra Links */}
+        {/* Footer */}
         <p className="text-sm text-gray-600 text-center mt-6">
           Don’t have an account?{" "}
-          <Link to={"/register"} className="text-blue-500 hover:underline">
+          <Link
+            to="/register"
+            className="text-blue-600 font-medium hover:underline"
+          >
             Register
           </Link>
         </p>
